@@ -1,8 +1,5 @@
 language: php
 php:
-- 5.2
-- 5.3
-- 5.4
 - 5.5
 - 5.6
 - 7.0
@@ -18,7 +15,7 @@ matrix:
   allow_failures:
   - php: 7.0
   - php: hhvm
-  
+
 install:
 - sudo apt-get install -y zip
 
@@ -32,12 +29,12 @@ before_script:
 
 script: phpunit --configuration phpunit_$DB.xml --coverage-clover=coverage.xml
 
-notifications:
-  irc: irc.freenode.org#yourfavouriteroomfortravis
+#notifications:
+#  irc: irc.freenode.org#yourfavouriteroomfortravis
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)
-- zip portfolio-${TRAVIS_TAG}.zip HelloWorld.php
+- zip php-${TRAVIS_TAG}.zip HelloWorld.php
 
 before_deploy:
 - git config --global user.email "github@travis-ci.org"
