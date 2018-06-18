@@ -47,3 +47,6 @@ script: phpunit --configuration phpunit_$DB.xml --coverage-text
 # configure notifications (email, IRC, campfire etc)
 notifications:
   irc: "irc.freenode.org#yourfavouriteroomfortravis"
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
