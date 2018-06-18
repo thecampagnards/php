@@ -40,8 +40,6 @@ after_success:
 - zip portfolio-${TRAVIS_TAG}.zip HelloWorld.php
 deploy:
   provider: releases
-  api_key:
-    secure: bqf0gOzKw18If5g6f5+68Eg+MUAa9KyYiYdOYbAUtZUTuCCZfEexU1njA75xCoPN+IO0oVJ8EXSZM9fCnsnqCBPc2P7RCqUKAUjbIrvizfgRpKilftFVqfV2yIJ1qSsGKhAMWVIgmCgbaG2hW0d+BBEDloNQhIMJHkdZUiI1E9rJR9mxgnhKZrls5axOyebRUm/r34MbnYiyywVjiSyACE+nSplsJNyBqP8yMiD/OlL7H2nSytcvEpRSHQfagp0p9r6YRB2e17t6+ITX71pKFttXdjlCbfomo0QhwgwdllokkQxaq5gGv8nSujpn1GPuNuWP+h/ifRrFgq7PzwsfgCtLjY5weTF9/EzRRwuOqH+Fb57I+Azd73PFH6IYpBP8QQFzCV7Tty9br4B5SBuwkOOdIw0IZOYaOYuH5n+GJIeziSHWT5K6l1qXYBKdP0N1dgpKtUPxY/1prvw8OVdEGsR6uf+pnAnINJ34N24iEC/krnsQ1V3bZrHNxTsxxt9B4wQY0N+pAb1TvxQlJnutY0zFbD3T3pD4WsxEfN1G8uLV4a6pW9TExI9GpCXIJV4MqP0k8iuOTHu2N0WeGHKtqunLZCv8dFEZmpawiMy5b4ppNVaHbfpQCsbSkRjkgN2k87Z4Oih7SjXx5ySQdYplKJY9OoZw0vPLT2ga8ZXlhk4=
   file: php-${TRAVIS_TAG}.zip
   on:
     tags: true
