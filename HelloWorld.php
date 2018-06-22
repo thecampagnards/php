@@ -26,4 +26,12 @@ class HelloWorld
         $stmt = $this->pdo->query($sql);
         return $stmt->fetchColumn();
     }
+
+    public function remove($what)
+    {
+        $sql = "DELETE FROM hello WHERE what = ?";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(1, $what);
+        return $stmt->execute();
+    }
 }
